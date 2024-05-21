@@ -13,6 +13,10 @@ class Paragraph:
         for section in doc.sections:
             paragraphs.extend(Paragraph._get_paragraphs(section.header))
             paragraphs.extend(Paragraph._get_paragraphs(section.footer))
+            paragraphs.extend(Paragraph._get_paragraphs(section.first_page_header))
+            paragraphs.extend(Paragraph._get_paragraphs(section.first_page_footer))
+            paragraphs.extend(Paragraph._get_paragraphs(section.last_page_header))
+            paragraphs.extend(Paragraph._get_paragraphs(section.last_page_footer))
 
         return paragraphs
 
